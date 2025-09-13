@@ -32,7 +32,7 @@ Then set up the project:
 ```bash
 # Clone your fork of the repository
 git clone https://github.com/YOUR-USERNAME/bogoDB.git
-cd bogoDB/bogoDB
+cd bogoDB
 
 # Install dependencies using uv
 uv sync
