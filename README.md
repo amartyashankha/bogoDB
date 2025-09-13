@@ -22,17 +22,20 @@ Your task is to optimize the graph structure for better query performance:
 
 ### Setup
 
+First, ensure you have [uv](https://docs.astral.sh/uv/) installed:
+```bash
+# Install uv (if not already installed)
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+Then set up the project:
 ```bash
 # Clone your fork of the repository
 git clone https://github.com/YOUR-USERNAME/bogoDB.git
-cd bogoDB
+cd bogoDB/bogoDB
 
-# Create a virtual environment (recommended)
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-
-# Install dependencies
-pip install -r requirements.txt
+# Install dependencies using uv
+uv sync
 
 # Run the full pipeline
 ./run_all.sh
@@ -110,10 +113,10 @@ Your solution will be evaluated based on:
 ./run_all.sh
 
 # Or run just your optimizer
-python candidate_submission/optimize_graph.py
+uv run candidate_submission/optimize_graph.py
 
 # Then evaluate your solution
-python scripts/evaluate_graph.py
+uv run scripts/evaluate_graph.py
 ```
 
 The evaluation will compare your optimized graph against the initial random graph.
