@@ -113,10 +113,10 @@ Your solution will be evaluated based on:
 ./run_all.sh
 
 # Or run just your optimizer
-uv run candidate_submission/optimize_graph.py
+uv run -m candidate_submission.optimize_graph
 
 # Then evaluate your solution
-uv run scripts/evaluate_graph.py
+uv run -m scripts.evaluate_graph
 ```
 
 The evaluation will compare your optimized graph against the initial random graph.
